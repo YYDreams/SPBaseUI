@@ -1,0 +1,90 @@
+//
+//  BaseUIViewController.swift
+//  BaseUI
+//
+//  Created by flowerflower on 2021/8/15.
+//
+
+import Foundation
+import XMUtil
+
+
+// MARK: ------------------------- Const/Enum/Struct
+
+extension BaseUIViewController {
+    
+
+    
+}
+
+open  class BaseUIViewController: UIViewController {
+    
+    
+    // MARK: ------------------------- Propertys
+    
+    
+    
+    // MARK: ------------------------- CycLife
+    open override func viewDidLoad() {
+        self.view.backgroundColor = kBgColor
+        super.viewDidLoad()
+    }
+    
+    // MARK: ------------------------- Events
+    
+    // MARK: ------------------------- Methods
+    
+    
+    public func showLoadingView(){
+        
+    }
+    
+    public func hideLoadingView(){
+        
+    }
+    
+    
+    
+    public func showNetworkErrorView(){
+        
+    }
+    
+    public func hideNetworkErrorView(){
+        
+    }
+    
+    
+    public func showNoDataErrorView(){
+        
+    }
+    
+    public func hideNoDataErrorView(){
+        
+    }
+    
+    
+    public func onNetworkErrorViewReload(){
+        
+    }
+    
+    public func onNoDataErrorViewReload(){
+        
+    }
+    
+    ///服务挂了 显示正在连接中，请重试
+    public func showConnectingErrorView(){
+        
+    }
+    
+    public func showHudText(text:String){
+        
+        
+        showHudWithText(text: text)
+    }
+    public func showHudWithText(text:String,toView:UIView? = nil,afterDelay:TimeInterval? = 1.5){
+        
+        HudManager().showHudWithText(text: text, toView: toView, afterDelay: afterDelay)
+        
+    }
+    
+}
