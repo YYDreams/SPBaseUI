@@ -12,16 +12,10 @@ open  class BaseTableViewController: BaseUIViewController {
     
     
     // MARK: ------------------------- Propertys
-    public lazy var tableView: UITableView = {
-        let tableView = UITableView(frame: .zero, style: .plain)
+    public lazy var tableView: BaseTableView = {
+        let tableView = BaseTableView(frame: .zero, style: .plain)
         tableView.delegate = self
         tableView.dataSource = self
-
-        tableView.estimatedRowHeight = 0
-        tableView.estimatedSectionHeaderHeight = 0
-        tableView.estimatedSectionFooterHeight = 0
-        tableView.tableHeaderView = UIView()
-        tableView.tableFooterView = UIView()
         return tableView
     }()
     
