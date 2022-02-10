@@ -30,7 +30,9 @@ extension BaseTabBarViewController{
 
         
         guard let homeVc  =  SPMediator.shared().SPHomeUI_homeViewController(),
-              let userCenterVc  =  SPMediator.shared().SPUserCenterUI_userCenterViewController() else{
+              let userCenterVc  =  SPMediator.shared().SPUserCenterUI_userCenterViewController()
+              
+              else{
               
             return
         }        
@@ -43,7 +45,9 @@ extension BaseTabBarViewController{
         
         let controllers:[UIViewController]  =
             [homeVc,UIViewController(),UIViewController(),UIViewController(),userCenterVc]
-//        [SPHomeViewController(),SPDeveloperViewController(),LearningCenterViewController(),SPAlgorithmViewController(),MineViewController()]
+//       Summarize [SPHomeViewController(),SPDeveloperViewController(),LearningCenterViewController(),SPAlgorithmViewController(),MineViewController()]
+        
+     
         let normalImageNames = ["icon_play_stop","icon_play_stop","","icon_play_stop","icon_play_stop"]
         let selectImageNames = ["icon_play_stop","icon_play_stop","","icon_play_stop","icon_play_stop"]
         
@@ -62,9 +66,12 @@ extension BaseTabBarViewController{
             addChild( BaseNavViewController(rootViewController: vc))
             
         }
-        self.selectedIndex = 0
+        self.selectedIndex = 4
         
+     
+
     }
+
     private func setupAppearance(){
         
         let tabBar = UITabBarItem.appearance()

@@ -14,8 +14,6 @@ public class BaseTableView: UITableView {
     }
 
     func setupCommmonInit(){
-        tableHeaderView = UIView()
-        tableFooterView = UIView()
         estimatedRowHeight = 0
         estimatedSectionHeaderHeight = 0
         estimatedSectionFooterHeight = 0

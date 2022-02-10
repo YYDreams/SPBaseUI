@@ -25,7 +25,8 @@ open  class BaseTableViewController: BaseUIViewController {
         super.viewDidLoad()
         view.addSubview(tableView)
         tableView.snp.makeConstraints{
-            $0.left.top.right.equalTo(self.view)
+            $0.left.right.equalTo(self.view)
+            $0.top.equalTo(kNavBarHeight)
             $0.bottom.equalTo(-kSafeAreaBottom)
         }
     }
